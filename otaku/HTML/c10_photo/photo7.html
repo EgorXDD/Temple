@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forest Path</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<header>
+  <h1>Forest Path</h1>
+  <a class="back-link" href="../category10.html">← 回到上一頁</a>
+</header>
+
+<main>
+  <section class="photo-box">
+    <img src="../../img/10/7.jpg" alt="Forest Path" class="photo-img" onclick="openPopup(this)">
+    <h2 class="photo-title">Forest Path</h2>
+    <p class="photo-desc">
+      A peaceful walkway hidden deep in the forest.
+      Soft light filters through the trees, creating a calm and refreshing atmosphere.
+    </p>
+  </section>
+</main>
+
+<!-- Popup -->
+<div id="popup" class="popup" onclick="closePopup()">
+  <span class="close">&times;</span>
+  <img id="popup-img" class="popup-content">
+  <div id="caption"></div>
+</div>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>
