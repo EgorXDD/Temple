@@ -2,29 +2,33 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title id="page-title">大赤崁龍德宮</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">廟宇典藏</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <header>
-  <h1 id="temple-name">大赤崁龍德宮</h1>
+  <h1 id="temple-name">載入中...</h1>
   <p id="temple-address" class="intro"></p>
-  <p id="temple-desc" class="intro"></p>
+  <!-- Description from data.js injected here -->
+  <div id="temple-desc-container"></div>
   <a class="back-link" href="../index.html">← 回到上一頁</a>
 </header>
 
 <main>
+  <!-- Photo grid injected here by loader.js -->
   <section id="gallery-grid" class="gallery"></section>
 </main>
 
-<!-- Popup Container (Keep if you use the popup script) -->
+<!-- Unified Popup Component -->
 <div id="popup" class="popup" onclick="closePopup()">
   <span class="close">&times;</span>
   <img id="popup-img" class="popup-content">
   <div id="caption"></div>
 </div>
 
+<!-- Load data first, then the logic -->
 <script src="../js/data.js"></script>
 <script src="../js/loader.js"></script>
 </body>
