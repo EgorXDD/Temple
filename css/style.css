@@ -154,7 +154,7 @@ h1 {
 }
 
 .back-link:hover {
-  background: #ff6f61;       /* coral hover color */
+  background: #ff6f61;
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
