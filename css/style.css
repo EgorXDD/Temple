@@ -264,3 +264,123 @@ main {
   from { transform: translateY(-50%) scale(0.8); opacity: 0; }
   to { transform: translateY(-50%) scale(1); opacity: 1; }
 }
+
+/* --- NEWLY ADDED FUNCTIONS --- */
+
+/* 1. Top-Left Corner Positioning for Back Link */
+.temple-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 30px !important; /* Extra top padding for the button */
+}
+
+.temple-header .back-link {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  margin: 0;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  z-index: 10;
+}
+
+/* 2. Wide Map Banner (Box Style) */
+.map-banner-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 4px solid #ffffff;
+}
+
+.map-header {
+  padding: 10px 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+
+.map-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #2bb673;
+}
+
+.map-frame-wrapper {
+  width: 100%;
+  height: 350px;
+}
+
+#temple-map {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#temple-desc-container {
+  max-width: 700px;
+  margin: 10px auto;
+  color: #555;
+}
+
+/* Mobile responsive for new elements */
+@media (max-width: 600px) {
+  .map-frame-wrapper {
+    height: 250px;
+  }
+  .temple-header {
+    padding-top: 70px !important;
+  }
+}
+
+/* --- Search Bar Styling --- */
+.search-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 14px 25px;
+  font-size: 1rem;
+  border: 2px solid #ffecd2; /* Light Peach border to match header */
+  border-radius: 30px;      /* Rounded pill shape */
+  outline: none;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  box-sizing: border-box;   /* Ensures padding doesn't break width */
+}
+
+#searchInput:focus {
+  border-color: #2bb673;    /* Turns Mint Green when clicking */
+  box-shadow: 0 4px 15px rgba(43, 182, 115, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Style for the search results container */
+#search-results-grid {
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+/* Label for temple names in search results */
+#search-results-grid .photo span {
+  display: block;
+  font-size: 0.8rem;
+  color: #ff6f61; /* Peach accent */
+  font-weight: bold;
+  margin-bottom: 5px;
+}

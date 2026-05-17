@@ -2,9 +2,10 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=devic1e-width, initial-scale=1.0">
   <title>澎湖廟宇匾額典藏</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
@@ -13,8 +14,12 @@
   <p class="intro">探索澎湖各地廟宇匾額，感受文化與歷史的交織。</p>
 </header>
 
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="搜尋匾額名稱 (例如：威靈顯赫)..." onkeyup="searchPhotos()">
+  <div id="search-results-grid" class="gallery" style="display: none; margin-top: 20px; border-bottom: 2px solid #eee; padding-bottom: 30px;"></div>
+</div>
+
 <main class="layout">
-  <!-- 馬公市 -->
   <section class="category-section">
     <h2>馬公市</h2>
     <ul class="categories">
@@ -23,7 +28,6 @@
     </ul>
   </section>
 
-  <!-- 湖西鄉 -->
   <section class="category-section">
     <h2>湖西鄉</h2>
     <ul class="categories">
@@ -32,7 +36,6 @@
     </ul>
   </section>
 
-  <!-- 白沙鄉 -->
   <section class="category-section">
     <h2>白沙鄉</h2>
     <ul class="categories">
@@ -41,7 +44,7 @@
       <li><a href="HTML/template.html?id=c7">蜩鳴宮</a></li>
       <li><a href="HTML/template.html?id=c8">大赤崁龍德宮</a></li>
       <li><a href="HTML/template.html?id=c9">文衡聖帝廟</a></li>
-      <li><a href="HTML/template.html?id=c10">後寮威靈宮</a></li>
+      <li><a href="HTML/template.html?id=c10">後寮威靈宮(未完成)</a></li>
       <li><a href="HTML/template.html?id=c11">永安宮</a></li>
       <li><a href="HTML/template.html?id=c12">明新宮</a></li>
       <li><a href="HTML/template.html?id=c13">講美村龍德宮</a></li>
@@ -49,6 +52,8 @@
   </section>
 </main>
 
+<script src="js/data.js"></script>
+<script src="js/search.js"></script>
 
 </body>
 </html>

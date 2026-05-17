@@ -4,12 +4,12 @@ function openPopup(imgElement) {
   var caption = document.getElementById("caption");
 
   popup.style.display = "block";
-  document.body.style.overflow = "hidden"; // Prevent background scrolling
+  document.body.style.overflow = "hidden";
   popupImg.src = imgElement.src;
   caption.innerHTML = imgElement.alt;
 }
 
 function closePopup() {
   document.getElementById("popup").style.display = "none";
-  document.body.style.overflow = "auto"; // Restore scrolling
+  document.body.style.overflow = "auto";
 }

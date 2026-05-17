@@ -5,30 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">廟宇典藏</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 <body>
 
-<header>
+<header class="temple-header">
+  <a class="back-link" href="../index.html">← 回到首頁</a>
+
   <h1 id="temple-name">載入中...</h1>
   <p id="temple-address" class="intro"></p>
-  <!-- Description from data.js injected here -->
-  <div id="temple-desc-container"></div>
-  <a class="back-link" href="../index.html">← 回到上一頁</a>
-</header>
 
-<main>
-  <!-- Photo grid injected here by loader.js -->
+  <div id="temple-desc-container"></div>
+
+  <div class="map-banner-box">
+    <div class="map-header">
+      <h3>廟宇地理位置</h3>
+    </div>
+    <div class="map-frame-wrapper">
+      <iframe
+        id="temple-map"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</header>
+<main class="layout">
   <section id="gallery-grid" class="gallery"></section>
 </main>
 
-<!-- Unified Popup Component -->
 <div id="popup" class="popup" onclick="closePopup()">
   <span class="close">&times;</span>
   <img id="popup-img" class="popup-content">
   <div id="caption"></div>
 </div>
 
-<!-- Load data first, then the logic -->
 <script src="../js/data.js"></script>
 <script src="../js/loader.js"></script>
 </body>
