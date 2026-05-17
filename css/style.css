@@ -205,4 +205,62 @@ main {
   margin-top: 10px;     /* reduce gap below header */
 }
 
+.popup {
+  display: none;        /* Hidden by default */
+  position: fixed;     /* Stay in place on top of the screen */
+  z-index: 2000;       /* Higher than everything else */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  cursor: pointer;
+  overflow: hidden;    /* Prevent scrolling while open */
+}
 
+/* 2. The Image Inside the Popup */
+.popup-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Perfectly center vertically */
+  border: 3px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease; /* Smooth entrance */
+}
+
+/* 3. The Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #2bb673; /* Match your mint green theme */
+}
+
+/* 4. The Caption */
+#caption {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Smooth zoom animation */
+@keyframes zoomIn {
+  from { transform: translateY(-50%) scale(0.8); opacity: 0; }
+  to { transform: translateY(-50%) scale(1); opacity: 1; }
+}
