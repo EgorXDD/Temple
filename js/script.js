@@ -1,12 +1,11 @@
 function openPopup(imgElement) {
-  var popup = document.getElementById("popup");
-  var popupImg = document.getElementById("popup-img");
-  var caption = document.getElementById("caption");
+  const popup = document.getElementById("popup");
 
   popup.style.display = "block";
   document.body.style.overflow = "hidden";
-  popupImg.src = imgElement.src;
-  caption.innerHTML = imgElement.alt;
+
+  document.getElementById("popup-img").src = imgElement.src;
+  document.getElementById("caption").innerHTML = imgElement.alt;
 }
 
 function closePopup() {

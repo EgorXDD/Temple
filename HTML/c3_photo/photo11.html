@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forest Path</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<header>
+  <h1>Forest Path</h1>
+<a class="back-link" href="javascript:history.back()">← 回到上一頁</a>
+</header>
+
+<main>
+  <section class="photo-box">
+    <img src="../../img/3/11.jpg" alt="Forest Path" class="photo-img" onclick="openPopup(this)">
+    <h2 class="photo-title">忠能顯義</h2>
+    <p class="photo-desc">
+      本匾書寫「忠能顯義」，意指以忠誠之德彰顯義理精神，象徵神明以忠義為本，展現守正不阿與護持正道的信仰核心。此語常見於關聖帝君信仰體系中，反映地方對忠義價值的高度尊崇。
+    </p>
+  </section>
+</main>
+
+<!-- Popup -->
+<div id="popup" class="popup" onclick="closePopup()">
+  <span class="close">&times;</span>
+  <img id="popup-img" class="popup-content">
+  <div id="caption"></div>
+</div>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>
